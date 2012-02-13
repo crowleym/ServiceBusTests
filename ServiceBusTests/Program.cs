@@ -35,7 +35,7 @@ namespace ServiceBusTests
             Console.WriteLine("q to quit, anoy other key to send message");
             while (Console.ReadKey().KeyChar != 'q')
             {
-                bus.Send(new TestMessage() { Content = "Hello World!" + Guid.NewGuid() });
+                bus.Send(loadBalancer.Endpoint, new TestMessage() { Content = "Hello World!" + Guid.NewGuid() });
 
             }
 
