@@ -14,6 +14,7 @@ namespace ConsoleApplication1
         public void Consume(TestMessage message)
         {
             Console.WriteLine(message.Content);
+            System.Threading.Thread.Sleep(2000); // simulate work
         }
 
         #endregion
